@@ -17,12 +17,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class itemStockBalanceFragmentController {
+public class ItemStockBalanceFragmentController {
     public void controller() {
 
     }
 
-    public List<SimpleObject> fetchStockBalance(@RequestParam(value = "categoryId", required = false) Integer categoryId,
+    public List<SimpleObject> fetchItemStockBalance(@RequestParam(value = "categoryId", required = false) Integer categoryId,
                                                 @RequestParam(value = "itemName", required = false) String itemName,
                                                 @RequestParam(value = "currentPage", required = false) Integer currentPage,
                                                 HttpServletRequest request,
@@ -32,10 +32,8 @@ public class itemStockBalanceFragmentController {
         InventoryService inventoryService = Context.getService(InventoryService.class);
         List<Role> roles = new ArrayList<Role>(Context.getAuthenticatedUser().getAllRoles());
 
-        List <Role>role=new ArrayList<Role>(Context.getAuthenticatedUser().getAllRoles());
-
         InventoryStoreRoleRelation inventoryStoreRoleRelation=null;
-        for(Role roleUser : role){
+        for(Role roleUser : roles){
             if(inventoryService.getStoreRoleByName(roleUser.toString())!=null){
                 inventoryStoreRoleRelation = inventoryService.getStoreRoleByName(roleUser.toString());
             }
