@@ -309,6 +309,7 @@ input[type="text"], select {
         <div id="tabs" style="margin-top: 40px!important;">
             <ul id="inline-tabs">
                 <li><a href="#queues">Drug Stock</a></li>
+                <li><a href="#itemstock">Items Stock</a></li>
                 <li><a href="#manage">Expired Drugs</a></li>
                 <li><a href="#receipts">Receipts</a></li>
                 <li><a href="#transers">Transfer</a></li>
@@ -337,10 +338,13 @@ input[type="text"], select {
             <div id="transers">
                 ${ui.includeFragment("ehrinventoryapp", "transferDrugFromGeneralStore")}
             </div>
-
+            <div id="itemstock">
+                ${ui.includeFragment("ehrinventoryapp", "itemStockBalance")}
+            </div>
             <div id="accounts">
                 ${ui.includeFragment("ehrinventoryapp", "issueDrugAccountList")}
             </div>
+
         </div>
 
     </div>
