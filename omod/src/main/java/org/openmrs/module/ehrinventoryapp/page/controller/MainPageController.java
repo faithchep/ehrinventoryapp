@@ -2,6 +2,7 @@ package org.openmrs.module.ehrinventoryapp.page.controller;
 
 import org.openmrs.Role;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.ehrinventory.model.InventoryItemCategory;
 import org.openmrs.module.ehrinventoryapp.EhrInventoryAppConstants;
 import org.openmrs.module.hospitalcore.model.InventoryDrugCategory;
 import org.openmrs.module.hospitalcore.model.InventoryStore;
@@ -29,6 +30,7 @@ public class MainPageController {
     public String get(PageModel pageModel, UiUtils uiUtils) {
         InventoryService inventoryService = Context.getService(InventoryService.class);
         List<InventoryDrugCategory> listCategory = inventoryService.listDrugCategory("", 0, 0);
+        List<InventoryItemCategory> itemCatagoryList = inventoryService.listItemCategory("",0,0);
         List<Role> role = new ArrayList<Role>(Context.getAuthenticatedUser().getAllRoles());
         List<Action> listMainStoreStatus = ActionValue.getListIndentMainStore();
 
@@ -52,6 +54,7 @@ public class MainPageController {
         }*/
         pageModel.addAttribute("listMainStoreStatus", listMainStoreStatus);
         pageModel.addAttribute("listCategory", listCategory);
+        pageModel.addAttribute("itemCatagoryList",itemCatagoryList);
         pageModel.addAttribute("listStore", listStore);
         return null;
     }

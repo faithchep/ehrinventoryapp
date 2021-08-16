@@ -32,20 +32,20 @@
                 jq('.add-receipts').hide(100);
             }
             if (jq('#inline-tabs li.ui-tabs-active').attr('aria-controls') === 'itemstock') {
-                jq('.items-stock').show(100);
+                jq('.drugs-stock').show(100);
             } else {
-                jq('.items-stock').hide(100);
+                jq('.drugs-stock').hide(100);
             }
-
         }).click();
 
         jq('.add-receipts').click(function () {
-            window.location.href = (ui.pageLink('ehrinventoryapp', 'addReceiptsToGeneralStore'));
+            window.location.href = (ui.pageLink('ehrinventoryapp', 'addItemReceiptsToGeneralStore'));
+        });
+        jq('.drugs-stock').show(100);
+        jq('.drugs-stock').click(function () {
+            window.location.href = (ui.pageLink('ehrinventoryapp', 'main'));
         });
 
-        jq('.items-stock').click(function () {
-            window.location.href = (ui.pageLink('ehrinventoryapp', 'itemStock'));
-        });
     });
 </script>
 
@@ -308,7 +308,7 @@ input[type="text"], select {
     <div class="patient-header new-patient-header">
         <div class="demographics">
             <h1 class="name" style="border-bottom: 1px solid #ddd;">
-                <span>INVENTORY DASHBOARD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+                <span>NON-PHARMS DASHBOARD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
             </h1>
         </div>
 
@@ -318,9 +318,7 @@ input[type="text"], select {
 
         <div id="tabs" style="margin-top: 40px!important;">
             <ul id="inline-tabs">
-                <li><a href="#queues">Drug Stock</a></li>
                 <li><a href="#itemstock">Items Stock</a></li>
-                <li><a href="#manage">Expired Drugs</a></li>
                 <li><a href="#receipts">Receipts</a></li>
                 <li><a href="#transers">Transfer</a></li>
                 <li><a href="#accounts">Issue to Account</a></li>
@@ -332,30 +330,23 @@ input[type="text"], select {
                     </a>
                 </li>
                 <li>
-                    <a class="button task items-stock" style="display: none; color: #fff;">
+                    <a class="button task drugs-stock" style="display: none; color: #fff;">
                         <i class="ui-icon-suitcase small"></i>
-                        Non-Pharm Items
+                        Drugs Stock
                     </a>
                 </li>
             </ul>
 
-            <div id="queues">
-                ${ui.includeFragment("ehrinventoryapp", "stockBalance")}
-            </div>
-
-            <div id="manage">
-                ${ui.includeFragment("ehrinventoryapp", "stockBalanceExpiry")}
+            <div id="itemstock">
+                ${ui.includeFragment("ehrinventoryapp", "itemStockBalance")}
             </div>
 
             <div id="receipts">
-                ${ui.includeFragment("ehrinventoryapp", "receiptsToGeneralStore")}
+                ${ui.includeFragment("ehrinventoryapp", "itemReceiptsToGeneralStore")}
             </div>
 
             <div id="transers">
                 ${ui.includeFragment("ehrinventoryapp", "transferDrugFromGeneralStore")}
-            </div>
-            <div id="itemstock">
-                ${ui.includeFragment("ehrinventoryapp", "itemStockBalance")}
             </div>
             <div id="accounts">
                 ${ui.includeFragment("ehrinventoryapp", "issueDrugAccountList")}
