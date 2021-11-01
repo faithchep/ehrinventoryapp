@@ -39,7 +39,7 @@
         }).click();
 
         jq('.add-receipts').click(function () {
-            window.location.href = (ui.pageLink('ehrinventoryapp', 'addReceiptsToGeneralStore'));
+            window.location.href = (ui.pageLink('ehrinventoryapp', 'addItemReceiptsToGeneralStore'));
         });
         jq('.drugs-stock').show(100);
         jq('.drugs-stock').click(function () {
@@ -342,7 +342,7 @@ input[type="text"], select {
             </div>
 
             <div id="receipts">
-                ${ui.includeFragment("ehrinventoryapp", "receiptsToGeneralStore")}
+                ${ui.includeFragment("ehrinventoryapp", "itemReceiptsToGeneralStore")}
             </div>
 
             <div id="transers">
