@@ -1,51 +1,111 @@
 name,description
-ANALGESICS (OPIOIDS),"Opioid analgesics, also known as narcotic analgesics, are pain relievers that act on the central nervous system.Opioid (narcotic) analgesics are derived from or related to the Opium"
-ANTIALLERGIC DRUGS,Any drug of this kind that prevents or relieves an allergy.
-ANTIBACTERIAL DRUGS,"Several antibiotic agents are also effective against a number of fungi, protozoans and some are toxic to humans and animals, even when given in therapeutic dosage."
-ANTIDIABETIC DRUGS,"Drugs used in diabetes treat diabetes mellitus by lowering glucose levels in the blood. With the exceptions of insulin, exenatide, liraglutide and pramlintide, all are administered orally and are thus also called oral hypoglycemic agents or oral antihyperglycemic agents."
-ANTICONVULSANT AND DRUGS FOR TRIGEMINAL NEURALGIA,Anticonvulsants also commonly known as antiepileptic drugs are a diverse group of pharmacological agents used in the treatment of epileptic seizures.
-ANTIFUNGAL DRUGS, A drug that limits or prevents the growth of yeasts and other fungal organisms.
-ANTILEISHMANIAL DRUGS,"Antileishmanial chemotherapy is hampered by the location of the parasite within the phagolysosome of the macrophage, which restricts the bioavailability of many potentially useful antileishmanial drugs. "
-ANTIPROTOZOAL DRUGS,"Antiprotozoals are drugs to treat infections caused by single cell organisms,called protozoa which are animal like, such as amoebas. Protozoal infection transmission can be person to person ingestion of contaminated water or food, direct contact with a parasite, a mosquito or tick.malaria are examples of diseases caused by protozoa"
-ANTIPARKINSON DRUGS,An antiparkinson is a type of drug which is intended to treat and relieve the symptoms of Parkinson's disease. Most of these agents act by either increasing dopamine activity or reducing acetylcholine activity in the central nervous system.
-ANTIVIRAL DRUG,"An agent that kills a virus or that suppresses its ability to replicate and, hence, inhibits its capability to multiply and reproduce."
-ANTHELMINTIC DRUGS,Anthelmintics are drugs that are used to treat infections with parasitic worms
-DISINFECTANTS AND ANTISEPTICS,"Drugs used to prevention of germ growth near burns, cuts and wounds."
-CARDIOVASCULAR DRUGS,These drugs work through the autonomic (automatic) nervous system by blocking nerve receptors that are called alpha receptors.
-DERMATOLOGICAL PREPARATIONS," Dermatological preparation deals with the diagnosis and treatment of diseases and disorders of the skin. """
-DIURETICS,Diuretics are drugs that can increase the amount of water and sodium that is excreted in the urine.
-RESPIRATORY TRACT DRUGS,Drugs and medicines for conditions and diseases relating to the lungs and/or breathing.
+DISEASE-MODIFYING AGENTS USED IN RHEUMATOID DISORDERS (DMARDS),(DMARDs) are a class of medications used to treat inflammatory types of arthritis/ such as rheumatoid arthritis.
+COUNTERIRRITANTS,A counterirritant is a substance which creates irritation or mild inflammation in one location with the goal of lessening discomfort and/or inflammation in another location.
+ANTIFUNGALS,A drug that limits or prevents the growth of yeasts and other fungal organisms.
+ANTILEPROSY/ANTITUBERCULOSIS DRUGS,A Leprostatic agent is a drug that interferes with proliferation of the bacterium that causes leprosy and Antituberculosis drugs are medicines used to treat tuberculosis.
+MUSCLE RELAXANTS,A muscle relaxant is a drug which affects skeletal muscle function and decreases the muscle tone. It may be used to alleviate symptoms such as muscle spasms.
+ACID–BASE IMBALANCE,Acidâ€“base imbalance is an abnormality of the human body's normal balance of acids and bases that causes the plasma pH to deviate out of the normal range (7.35 to 7.45).
+ADRENERGIC DRUGS,Adrenergic drugs stimulate the nerves in your body's sympathetic nervous system (SNS).
+ANTIFOAMING DRUGS,Agents used to prevent the formation of foam or to treat flatulence or bloat.
+ALDOSTERONE RECEPTOR ANTAGONISTS,Aldosterone receptor Antagonists are a class of drugs  used for the treatment of high blood pressure or heart failure by blocking the effects of aldosterone.
+AMINOSALICYLATES,Aminosalicylates are group of medications that is often used to treat ulcerative colitis and Crohn's disease.
+ANTIVIRAL DRUGS,An agent that kills a virus or that suppresses its ability to replicate.
+ANTIDOTES,An agent that neutralizes a poison or counteracts its clinical or physiologic effects.An antidote may be mechanical.
+ANTISPASMODIC DRUGS,An antispasmodic (synonym: spasmolytic) is a drug or an herb that suppresses muscle spasms.
+ANAESTHETICS AND THEATRE DRUGS,Anaesthetics is drug that temporarily depresses neuronal function.
+ANALGESICS AND ANTI INFLAMMATORY DRUGS,Analgesics is a class of drugs that are designed to relieve pain without causing loss of consciousness. Anti-inflammatory drug is a type of medicine that treats swelling and redness.
+ANTACIDS,Antacids are agents that neutralize the gastric acid and raise the gastric pH
+ANTIHELMINTIC DRUGS,Anthelmintics are drugs that are used to treat infections with parasitic worms.
+ANTIANAEMIC DRUGS,Antianemia drugs are therapeutic agents which increase either the number of red cells or the amount of hemoglobin in the blood.
+ANTIARRHYTHMICS DRUGS,Antiarrhythmic agents are a group of pharmaceuticals that are used to suppress abnormal rhythms of the heart (cardiac arrhythmias).
+ANTIBACTERIAL DRUGS ,Antibacterials/ are medications that destroy or slow down the growth of bacteria.
+ANTIBIOTICS,Antibiotics are used for treatment or prevention of bacterial infection.
 ANTICOAGULANTS AND HEMOSTATICS DRUGS,Anticoagulant is An agent that is used to prevent the formation of blood clots and  Hemostatics is a specific type of antihemorrhagic agent that works by contracting tissue to seal injured blood vessels.
-GASTROINTESTINAL DRUGS,"Drugs and medicines for the gastrointestinal organs and diseases relating to them, includes any part of the digestive tract from mouth to anus, liver, biliary tract, and the pancreas.Â "
-ANAESTHETICS AND THEATRE DRUGS,"Anaesthetics is drug that temporarily depresses neuronal function, producing total or partial loss of sensation with or without the loss of consciousness. "
-ENDOCRINOLOGY DRUGS,"Drugs for conditions relating to hormone-manufacturing glands such as the pituitary, thyroid, parathyroid, and adrenal glands, as well as the ovary and testis, the placenta, and the pancreas."
-IMMUNOSUPPRESSANT DRUGS,"Immunosuppressant drugs are a class of drugs that suppress or reduce the strength of the bodyâ€™s immune system. They are also called anti-rejection drugs. One of the primary uses of immunosuppressant drugs is to lower the bodyâ€™s ability to reject a transplanted organ, such as a liver, heart or kidney. "
-MUSCLE RELAXANTS,"A muscle relaxant is a drug which affects skeletal muscle function and decreases the muscle tone. It may be used to alleviate symptoms such as muscle spasms, pain, and hyperreflexia. "
-VITAMINS & MINERALS,"Vitamins and minerals are substances that are required for normal metabolism. They are essential in small amounts to maintain good health, promote growth and regulate body functions."
-ANTACIDS,"Antacids are agents that neutralize the gastric acid and raise the gastric pH, so are used to treat dyspepsia and are used as symptomatic relief of peptic ulcer. Antacids in common use salts of magnesium, aluminium and calcium."
-ANTIARRHYTHMICS DRUGS,"Antiarrhythmic agents are a group of pharmaceuticals that are used to suppress abnormal rhythms of the heart (cardiac arrhythmias), such as atrial fibrillation, atrial flutter, ventricular tachycardia, and ventricular fibrillation."
-ANTIASTHMATIC DRUGS,These drugs are used for the treatment of asthma. They may be useful either in the treatment or prevention of asthma attacks
-ANTIBIOTIC DRUGS,"Bactericidals kill bacteria directly, whereas bacteriostatics prevent them from dividing."
-ANTIDEPRESSANT DRUGS,"Antidepressants are drugs used for the treatment of major depressive disorder and other conditions, including dysthymia, anxiety disorders, obsessive compulsive disorder, eating disorders, chronic pain, neuropathic pain and, in some cases, dysmenorrhoea, snoring, migraine, attention-deficit hyperactivity disorder (ADHD), substance abuse and sleep disorders."
-ANTILEPROSY/ANTITUBERCULOSIS DRUGS,"A Leprostatic agent is a drug that interferes with proliferation of the bacterium that causes leprosy and Antituberculosis drugs are medicines used to treat tuberculosis, an infectious disease that can affect the lungs and other organs"
-BRONCHODILATOR DRUGS,"A bronchodilator is a substance that dilates the bronchi and bronchioles, decreasing resistance in the respiratory airway and increasing airflow to the lungs. Bronchodilators may be endogenous (originating naturally within the body), or they may be medications administered for the treatment of breathing difficulties."
-ANTISPASMODIC DRUGS ,An antispasmodic (synonym: spasmolytic) is a drug or an herb that suppresses muscle spasms.
-ANTIHISTAMINES ,"The newer antihistamines cause less drowsiness than the older ones, which include nonprescription drugs such as Benadryl Allergy, Chlor-Trimeton Allergy, and Dimetapp Allergy. But the newer drugs are no more effective than the older ones at relieving symptoms."
-CORTICOSTEROIDS,"Corticosteroids are a class of chemicals that includes the steroid hormones that are produced in the adrenal cortex of vertebrates, and synthetic analogues of these hormones. "
-ANTI-INFECTIVE DRUGS ,"An agent that is capable of acting against infection, either by inhibiting the spread of an infectious agent or by killing the infectious agent outright.Anti-infective is a general term that encompasses antibacterials, antibiotics, antifungals, antiprotozoans and antivirals"
-ANTIDOTES,"An agent that neutralizes a poison or counteracts its clinical or physiologic effects.An antidote may be mechanical, such as activated charcoal, which absorbs poisons in the GI tract and prevents their absorption."
-OXYTOXICS ANTI-OXYTOCICS ,OxytoxicsÂ inducesÂ laborÂ byÂ stimulatingÂ contractionsÂ ofÂ theÂ musclesÂ ofÂ theÂ uterus.
-PSYCHOTHERAPEUTIC DRUGS ,"DrugsÂ thatÂ areÂ prescribedÂ forÂ theirÂ effectsÂ inÂ relievingÂ symptomsÂ ofÂ anxiety,Â depression,Â orÂ otherÂ mentalÂ disorders."
-EMERGENCY DRUGS,"In the hospital setting, emergencies typically occur in emergency departments (EDs) and intensive care units (ICUs). But many also take place in progressive care units or general nursing units. And when they do, they can cause marked anxiety for nursesâ€”especially those unfamiliar or inexperienced with the drugs used in these emergencies."
-ACIDâ€“BASE IMBALANCE,Acidâ€“base imbalance is an abnormality of the human body's normal balance of acids and bases that causes the plasma pH to deviate out of the normal range (7.35 to 7.45).
-ANTIBIOTIC STEROID COMBINATION DRUGS,Ophthalmic steroids with anti-infectives are preparations designed to be applied into the eyes. They contain steroids and anti-infectives. Steroids are effective anti-inflammatory agents and are used to treat pain and inflammation.
-ANTI GLAUCOMA DRUGS,"The more advanced the glaucomatous process on initial presentation, the lower the target range generally needs to be to prevent further progression. This more aggressive target is meant to minimize the risk of progressive glaucoma damage and vision loss."
-ENT DRUGS,"Drugs and medicines for conditions relating to ENT (ears, nose, and throat) and organ that helps produce vocal sounds and serves as an air passageway, located in the neck/throat."
-OPHTHALMOLOGICAL PREPARATIONS,Ophthalmic preparations are agents especially designed to be applied to the eyes. The eye is extremely sensitive and is easily irritated if the composition of the ophthalmic preparation is not appropriate.
-ANTIRETROVIRAL DRUGS,"Antiretroviral drugs inhibit the reproduction of retrovirusesâ€”viruses composed of RNA rather than DNA. The best known of this group is HIV,  the causative agent of AIDS.Antiretroviral agents are virustatic agents which block steps in the replication of the virus."
-HORMONAL CONTRACEPTIVES,"Hormonal contraception refers to birth control methods that act on the endocrine system. Almost all methods are composed of steroid hormones, although in India one selective estrogen receptor modulator is marketed as a contraceptive."
-CYTOTOXIC DRUGS,"Cytotoxic drugs (sometimes known as antineoplastics) describe a group of medicines that contain chemicals which are toxic to cells, preventing their replication or growth, and so are used to treat cancer. They can also be used to treata number of other disorders such as rheumatoid arthritis and multiple sclerosis."
-ANTIHYPERTENSIVE DRUGS,"Antihypertensives are a class of drugs that are used to treat hypertension (high blood pressure). Antihypertensive therapy seeks to prevent the complications of high blood pressure, such as stroke and myocardial infarction. "
-ANALGESICS AND ANTI INFLAMMATORY DRUGS,Analgesics is a class of drugs that are designed to relieve pain without causing  loss of consciousness. Anti-inflammatory drug is a type of medicine that treats swelling and redness.
-"SOLUTIONS FOR WATER, ELECTROLYTE AND ACID BASE DISTURBANCE",Refers to distilled water used for preparing slutions and dissolving electrolytes
-IMMUNOGLOBULINS AND VACCINES,Vaccine and immunoglobulins are biological preparation that provides active acquired immunity to a particular disease
+ANTICONVULSANTS  AND DRUGS FOR TRIGEMINAL NEURALGIA,Anticonvulsants also commonly known as antiepileptic drugs are a diverse group of pharmacological agents used in the treatment of epileptic seizures.
+ANTIDEPRESSANTS,Antidepressants are drugs used for the treatment of major depressive disorder and other conditions.
+ANTIEMETIC DRUGS,Antiemetic drugs are medications used to treat nausea and vomiting.
+ANTIEPILEPTICS/ ANTICONVULSANTS,Antiepileptic/Anticonvulsants drugs are used for the treatment of epileptic seizures/ non-epileptic neurological conditions and psychiatric disorders.
+ANTI-FIBRINOLYTICS,Antifibrinolytics are drugs that promote blood clotting by preventing or slowing down fibrinolysis(the break down of blood clots).
+ANTIHISTAMINES,Antihistamines are a class of drugs commonly used to treat hay fever and symptoms of allergies.
+ANTIHYPERTENSIVE DRUGS,Antihypertensives are a class of drugs that are used to treat hypertension (high blood pressure). Antihypertensive therapy seeks to prevent the complications of high blood pressure.
+ANTIMALARIAL DRUGS,Antimalarial drugs are used for the treatment and prevention of malaria infection.
+ANTIMUSCARINIC DRUGS,Antimuscarinic medications are a specific group of anticholinergic drugs that block muscarinic receptors from the action of acetylcholine. They  reduce the symptoms of incontinence by reducing bladder muscle spasms.
+ANTIPROTOZOAL DRUGS,Antiprotozoal drugs are medicines that treat infections caused by protozoa.
+ANTIPRURITICS,Antipruritics/ also known as anti-itch drugs/ are medications that inhibit the itching (Latin: pruritus) often associated with sunburns/ allergic reactions/ eczema/ psoriasis/ chickenpox/ fungal infections/ insect bites and stings
+ANTIPSYCHOTICS,Antipsychotic drugs are a class of medicines used to treat psychosis and other mental and emotional conditions.
+ANTITHROMBOTIC DRUGS,Antithrombotic drugs are used to reduces the formation of blood clots.(used against or tending to prevent thrombosis.)
+ANTITHYROID DRUGS,Antithyroid drugs (also called thionamides) are most often used to treat an overactive thyroid (hyperthyroidism) caused by Graves' disease.
+ANTIVENOMS,Antivenoms drugs are used to stop snake venom from binding to tissues and causing serious blood/ tissue/ or nervous system problems.
+ANTIALLERGIC DRUGS,Any drug of this kind that prevents or relieves an allergy.
+ANTI-DIARRHEAL DRUGS,Any drug that relieves symptoms of diarrhea.
+BLOOD PRODUCTS AND PLASMA SUBSTITUTES,Any liquid used to replace blood plasma/ usually a saline solution/ often with serum albumins/ dextrans or other preparations. They are also used to treat dehydration.
+BENZODIAZEPINES,Benzodiazepines (benzos) are a class of drugs primarily used for treating anxiety/ but they also are effective in treating several other conditions.
+CONTRACEPTIVE DEVICES,Birth control/ also known as contraception/ anticonception/ and fertility control/ is a method or device used to prevent pregnancy.
+CHEMOTHERAPY DRUGS,Chemotherapy is an aggressive form of chemical drug therapy meant to destroy rapidly growing cells in the body.Drugs used to destroy cancer cells.
+CORTICISTEROIDS,Corticosteroids are a class of chemicals that includes the steroid hormones that are produced in the adrenal cortex of vertebrates.
+CYTOTOXIC ANTINEOPLASTICS,Cytotoxic drugs (sometimes known as antineoplastics) describe a group of medicines that contain chemicals which are toxic to cells.
+DECARBOXYLASE INHIBITORS,Decarboxylase inhibitors are a class of medications used to treat symptoms of Parkinson's disease.
+DECONGESTANT(ANTIHISTAMINES),Decongestants and Antihistamines are drugs used to treat cold and allergy symptoms.
+DERMATOLOGICAL PREPARATIONS,Dermatological preparation deals with the diagnosis and treatment of diseases and disorders of the skin.
+DIURETICS,Diuretics are drugs that can increase the amount of water and sodium that is excreted in the urine.
+NASAL DECONGESTANTS,Drug that is used to relieve nasal congestion in the upper respiratory tract.
+THROMBOPOIETIC DRUGS,Drug that may increase the number of platelets in the bloodstream.
+RESPIRATORY TRACT DRUGS,Drugs and medicines for conditions and diseases relating to the lungs and/or breathing.
+GASTROINTESTINAL DRUGS,Drugs and medicines for the gastrointestinal organs and diseases relating to them.
+ENDOCRINOLOGY DRUGS,Drugs for conditions relating to hormone-manufacturing glands such as the pituitary.
+ANTI-RHEUMATIC DRUGS,Drugs indicated for the treatment of several inflammatory arthritides/ including rheumatoid arthritis (RA)/ as well as for the management of other connective tissue diseases and some cancers.
+PSYCHOTHERAPEUTIC DRUGS,Drugs that are prescribed for their effects in relieving symptoms of anxiety.
+ANALGESICS AND ANTI INFLAMMATORY DRUGS (OPIOIDS),Drugs that are used to relieve pain and reduce inflammation.
+ELECTROLYTES AND MINERALS,Drugs that conduct nervous impulses/ contracting muscles/ keeping you hydrated and regulating your body’s pH levels.
+ANTIOXIDANTS,Drugs that inhibit oxidation/ caused by free radicals. They are commonly used in treatment of diabetes.
+ANTIMETABOLITES,Drugs that interfere with one or more enzymes or their reactions that are necessary for DNA synthesis. They are forms of chemotherapy drug/ most commonly used therapies to treat cancer.
+ANTIHAEMORRHAGICS,Drugs that reduce or prevent bleeding
+LAXATIVE,Drugs that stimulate or facilitate evacuation of the bowels.
+OVULATION STIMULANTS,Drugs that stimulates ovulation.
+IRON CHELATORS,Drugs used for treatment of iron overload.
+ANTIDIABETICS,Drugs used in diabetes treat diabetes mellitus by lowering glucose levels in the blood. With the exceptions of insulin.
+LIPID LOWERING AGENTS,Drugs used in the treatment of elevated serum lipids (hyperlipidemias) are targeted to decrease production of lipoprotein or cholesterol.
+ANTIANXIETY DRUGS,Drugs used to prevent anxiety and treat anxiety related to several anxiety disorders.
+DISINFECTANTS AND ANTISEPTICS,Drugs used to prevention of germ growth near burns.
+ASTRINGENTS,Drugs used to reduce swollen mucous membranes that result from inflammations of the nasal/ gastrointestinal/ and urinary passages.
+BICARBONATES,Drugs used to relieve heartburn/ sour stomach/ or acid indigestion by neutralizing excess stomach acid.
+ANTI-INFLAMMATORY AND ANTIPRURITIC MEDICINES,Drugs used to treat a variety of skin conditions.
+EPOETIN DRUGS,Drugs used to treat anemia (low red blood cell count).
+UV RAYS,Drugs used to treat certain skin conditions such as psoriasis/ vitiligo/ and skin tumors of cutaneous T-cell lymphoma.
+SENNOSIDES,Drugs used to treat constipation and empty the large intestine before surgery.
+ANTINEUTROPENIC DRUGS,Drugs/agents used to treat patients with cancer or conditions related to cancer.
+EMERGENCY DRUGS,Emergency drugs are concerned with the care of illnesses or injuries requiring immediate medical attention.
+ENZYME INHIBITORS,Enzyme inhibitors are molecules that bind to enzymes and lower their activity.
+EXPECTORANTS,Expectorants drugs are used to increase the output of bronchial secretions/ enhance the clearance of bronchial exudate/ and promote a productive cough.
+GLYCOGENOLYTIC HORMONES,Glycogenolytic hormones drug used to treat hypoglycemia in diabetes mellitus and as a part of gastrointestinal imaging procedures.
+HORMONAL THERAPY ANTINEOPLASTICS,Hormonal anticancer drugs are used to reduce or prevent proliferation of cancers that are responsive to specific levels of hormones.
+IMMUNOGLOBULINS,Immunoglobulins are biological preparation that provides active acquired immunity to a particular disease.
+IMMUNOSUPPRESSANT DRUGS,Immunosuppressant drugs are a class of drugs that suppress or reduce the strength of the bodyâ€™s immune system. They are also called anti-rejection drugs. One of the primary uses of immunosuppressant drugs is to lower the bodyâ€™s ability to reject a transplanted organ
+IMMUNOTHERAPY ANTINEOPLASTICS,Immunotherapy anticancer drugs are used treat cancer by boosting the body's natural defenses to fight cancer.
+INTRAVENOUS FLUIDS,Intravenous fluids (usually shortened to 'IV' fluids) are liquids given to replace water/ sugar and salt that you might need if you are ill or having an operation/ and can't eat or drink as you would normally.
+NON-STEROIDAL ANTI-INFLAMMATORY,Non-steroidal anti-inflammatory drugs is a class of analgesic medication that reduces pain/ fever and inflammation.
+OCULAR LUBRICANTS,Ocular lubricant is used to relieve burning/ irritation/ and discomfort caused by dry eyes.
+OPHTHALMIC LUBRICANTS AND IRRIGANTS,OPhthalmic lubricants are drugs used to treat dry and irritated eyes. Irrigant drug is used to wash and clean body cavities/ tissues or wounds.
+OPTHALMOLOGICAL PREPARATIONS,Ophthalmic preparations are agents especially designed to be applied to the eyes. The eye is extremely sensitive and is easily irritated if the composition of the ophthalmic preparation is not appropriate.
+OXYTOXICS ANTI-OXYTOCICS,Oxytoxics induces labor by stimulating contractions of the muscles of the uterus.
+PROGESTOGINS,Progestins are synthetic steroid hormones that activate the progesterone receptor in a similar way to progesterone but each individual progestin has its own distinctive effect.
+SALINE LAXATIVES,Saline laxatives are a type of laxatives mainly used for treating occasional constipation.
+ANTIASTHMATIC DRUGS,These drugs are used for the treatment of asthma. They may be useful either in the treatment or prevention of asthma attacks.
+CARDIOVASCULAR DRUGS,These drugs work through the autonomic (automatic) nervous system by blocking nerve receptors that are called alpha receptors.
+THYROID DRUGS,Thyroid drugs (thyroid hormones) are used to supplement low thyroid levels in people with hypothyroidism.
+THYROID HORMONES,Thyroid hormone is well known for controlling metabolism/ growth/ and many other bodily functions.
+VACCINES,Vaccine are biological preparation that provides active acquired immunity to a particular disease.
+VITAMINS AND MINERALS (SUPPLIMENTS),Vitamins and minerals are substances that are required for normal metabolism. They are essential in small amounts to maintain good health.
+ALDEHYDES,Aldehydes drugs are used as Therapeutic Targets for Cardiovascular Disease.
+FLUID AND ELECTROLYTE,Drugs used to regulate the osmotic pressure in cells and help maintain the function of muscle and nerve cells.
+GLUCOSE-ELEVATING AGENTS; METABOLIC & ENDOCRINE,Glucose elevating agents are used to treat hypoglycemia (low blood sugar). Metabolic & Endocrine are used to regulate pituitary cell function
+GONADOTROPIN-RELEASING HORMONES,GnRH drugs are used to treat endometriosis/ fibroids/ infertility and prostate cancer.
+IRRIGANT,Irrigant drug is used to wash and clean body cavities/ tissues or wounds.
+LUBRICANTS,Lubricating drugs are used to reduce morbidity and to prevent complications.
+NON-OPIOIDS ANALGESICS AND ANTI INFLAMMATORY DRUGS,Non-opioids Anti-inflammatory drugs (NSAIDs) control mild to moderate pain.
+PHOSPHODIESTERASE TYPE-5 INHIBITORS,Phosphodiesterase type 5 (PDE5) inhibitors are drugs most commonly used to treat erectile dysfunction (ED).
+RETINOID AND RELATED DRUGS,Retinoids are a group of medications related to vitamin A. They are used to treat various inflammatory skin disorders/ skin cancer/ and skin ageing.
+SUGARS,Drugs used cautiously in patients with cardiac or pulmonary disease/ hypertension/ renal insufficiency/ urinary obstruction/ or hypovolemia.
+VASOPRESSIN AND ANALOGUES,Vasopressin analogs are drugs used in the treatment of diabetes insipidus.
+XANTHINE OXIDASE INHIBITORS,Xanthine oxidase inhibitors are drugs used in treatment of congestive heart failure and hyperuricemia.
+CERUMENOLYTICS,Agents that soften hardened cerumen (earwax) and make it easier for it to be removed from the ear. They are softening agents/ which include types of oil/ emulsifying agents/ glycerin and other lubricating substances. Cerumenolytics are placed into the ears to soften earwax and ease discomfort.
