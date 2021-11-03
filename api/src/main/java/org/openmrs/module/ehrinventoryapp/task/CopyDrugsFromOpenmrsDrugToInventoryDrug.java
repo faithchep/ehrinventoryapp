@@ -179,6 +179,8 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
                         inventoryDrug.setDrugCore(openMrsDrug);
                         inventoryDrug.setAttribute(1);
                         inventoryDrug.setReorderQty(100);
+                        inventoryDrug.setVoided(0);
+
                         inventoryService.saveDrug(inventoryDrug);
                         }
                         else if(inventoryDrug != null && inventoryDrugFormulation != null) {
@@ -190,7 +192,6 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
                                 inventoryDrugFormulationList.add(inventoryDrugFormulation);
                                 Set<InventoryDrugFormulation> usedFormulations = new HashSet<InventoryDrugFormulation>(inventoryDrugFormulationList);
                                 inventoryDrug.setFormulations(usedFormulations);
-                                System.out.println("Updating the formulations for an already used drug" +name+" and formulations are "+usedFormulations);
                                 inventoryService.saveDrug(inventoryDrug);
                             }
                         }
