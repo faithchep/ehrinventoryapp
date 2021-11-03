@@ -90,7 +90,7 @@ name,dozage,description
 50mg,TAB
 7.5mg,TAB
 0.01%,CREAM
-0.01%,TOPICAL  SOL
+0.01%,TOPICAL SOL
 0.01%,TOPICAL OIL
 0.01%,SHAMPOO
 0.03%,OINTMENT
@@ -966,7 +966,7 @@ name,dozage,description
 6mg/mL,INJ
 88mg/4m,INJ
 93 mcg/actuation,NASAL SPRAY
-  40mg/mL,INJ
+ 40mg/mL,INJ
  20mg/mL,INJ
  80mg/mL,INJ
 0.14mL,SUSPENSION
@@ -1137,7 +1137,7 @@ name,dozage,description
 0.5mg,INFUSION
 100mg,CAP
 100mg,INj
-100mg  ,INFUSION
+100mg ,INFUSION
 100mg/100mL,INJ
 100mg/16.7mL,INJ
 100mg/50mL,INJ

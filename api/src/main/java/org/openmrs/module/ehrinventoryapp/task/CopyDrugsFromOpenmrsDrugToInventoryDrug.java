@@ -9,6 +9,7 @@ import org.openmrs.module.hospitalcore.model.InventoryDrug;
 import org.openmrs.module.hospitalcore.model.InventoryDrugCategory;
 import org.openmrs.module.hospitalcore.model.InventoryDrugFormulation;
 import org.openmrs.module.hospitalcore.model.InventoryDrugUnit;
+import org.openmrs.module.kenyaemr.reporting.data.converter.DrugOrdersListForPatientDataEvaluator;
 import org.openmrs.scheduler.tasks.AbstractTask;
 import org.openmrs.util.OpenmrsClassLoader;
 import org.slf4j.Logger;
@@ -18,8 +19,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
@@ -109,7 +115,7 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
                         inventoryDrugFormulation.setCreatedBy(Context.getAuthenticatedUser().getGivenName());
 
                         inventoryService.saveDrugFormulation(inventoryDrugFormulation);
-                        System.out.println("The formulation is >>"+name +" and "+dosage);
+                        //System.out.println("The formulation is >>"+name +" and "+dosage);
                     }
                 }
             }
@@ -131,8 +137,10 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
     }
     private void updateInventoryDrugObjects(InventoryService inventoryService, InputStream csvFile) {
         String line = "";
+        String line2 = "";
         String cvsSplitBy = ",";
         String headLine = "";
+        String headLine2 = "";
         String name = "";
         String concept_id = "";
         String category = "";
@@ -156,26 +164,36 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
                     InventoryDrugUnit inventoryDrugUnit = inventoryService.getDrugUnitById(1);
                     InventoryDrugCategory inventoryDrugCategory = inventoryService.getDrugCategoryByName(category);
                     InventoryDrugFormulation inventoryDrugFormulation = inventoryService.getDrugFormulation(strength, dosage);
-                    if(inventoryDrug == null && openMrsDrug != null && inventoryDrugUnit != null && inventoryDrugCategory != null && inventoryDrugFormulation != null) {
 
-                        Set<InventoryDrugFormulation> formulations = new HashSet<InventoryDrugFormulation>();
-                        formulations.add(inventoryService.getDrugFormulationById(1));
-
+                    if(openMrsDrug != null && inventoryDrugUnit != null && inventoryDrugCategory != null) {
+                        if(inventoryDrug == null && inventoryDrugFormulation != null) {
+                        Set<InventoryDrugFormulation> usedFormulations = new HashSet<InventoryDrugFormulation>();
+                        usedFormulations.add(inventoryDrugFormulation);
                         inventoryDrug  = new InventoryDrug();
                         inventoryDrug.setName(name);
                         inventoryDrug.setUnit(inventoryDrugUnit);
                         inventoryDrug.setCategory(inventoryDrugCategory);
-                        inventoryDrug.setFormulations(formulations);
+                        inventoryDrug.setFormulations(usedFormulations);
                         inventoryDrug.setCreatedOn(new Date());
                         inventoryDrug.setCreatedBy(Context.getAuthenticatedUser().getGivenName());
                         inventoryDrug.setDrugCore(openMrsDrug);
                         inventoryDrug.setAttribute(1);
                         inventoryDrug.setReorderQty(100);
-                        inventoryDrug.setConsumption(0);
-
-                        //commit to the database
-                        System.out.println("The drug being saved is >>"+inventoryDrug+">> "+name);
                         inventoryService.saveDrug(inventoryDrug);
+                        }
+                        else if(inventoryDrug != null && inventoryDrugFormulation != null) {
+                            //loop through the available formulations and compare with
+                            //check if there is an existing formulation and put them into a list for easier comparison
+                            List<InventoryDrugFormulation> inventoryDrugFormulationList = new ArrayList<InventoryDrugFormulation>(inventoryDrug.getFormulations());
+                            //Now compare wit the incoming formulation if is different from what exits, if yes, update the drug formulation if NOT just exit
+                            if(!(inventoryDrugFormulationList.contains(inventoryDrugFormulation))) {
+                                inventoryDrugFormulationList.add(inventoryDrugFormulation);
+                                Set<InventoryDrugFormulation> usedFormulations = new HashSet<InventoryDrugFormulation>(inventoryDrugFormulationList);
+                                inventoryDrug.setFormulations(usedFormulations);
+                                System.out.println("Updating the formulations for an already used drug" +name+" and formulations are "+usedFormulations);
+                                inventoryService.saveDrug(inventoryDrug);
+                            }
+                        }
 
                     }
                 }
