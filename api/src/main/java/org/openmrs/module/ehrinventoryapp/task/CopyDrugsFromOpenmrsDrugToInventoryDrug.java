@@ -192,6 +192,8 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
                                 inventoryDrugFormulationList.add(inventoryDrugFormulation);
                                 Set<InventoryDrugFormulation> usedFormulations = new HashSet<InventoryDrugFormulation>(inventoryDrugFormulationList);
                                 inventoryDrug.setFormulations(usedFormulations);
+                                inventoryDrug.setCategory(inventoryDrugCategory);
+                                inventoryDrug.setVoided(0);
                                 inventoryService.saveDrug(inventoryDrug);
                             }
                         }
