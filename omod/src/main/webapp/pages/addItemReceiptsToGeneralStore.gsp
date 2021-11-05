@@ -50,6 +50,7 @@
                             jq().toastmessage('showErrorToast', 'Ensure fields marked in Red are filled properly');
                             return false;
                         }
+
                         if (!compare_DOE_DOM_DOR(jq("#dateOfManufacture-field").val(), jq("#receiptDate-field").val())) {
                             return false;
                         }
@@ -76,17 +77,17 @@
                             receiptFrom = 'N/A';
                         }
 
-                        table.append('<tr id="' + index + '"><td>' + count + '</td><td>' + jq("#itemCategoryName").val() + '</td><td>'
+                        table.append('<tr id="' + index + '"><td>' + count + '</td><td>' + jq("#itemSubCategory").val() + '</td><td>'
                             + jq("#itemName").val() + '</td><td>' + jq("#itemSpecification option:selected").text() + '</td><td>'
                             + jq("#quantity").val() + '</td><td>' + unitPrice + '</td><td>' + institutionalCost + '</td><td>'
-                            + jq("#costToThePatient").val() + '</td><td>' + jq("#batchNo").val() + '</td><td>' + jq("#receiptDate-display").val() + '</td><td>' + receiptFrom
+                            + jq("#costToThePatient").val() + '</td><td>' + jq("#receiptDate-display").val() + '</td><td>' + receiptFrom
                             + '</td><td><a onclick="removerFunction(' + index + ')" class="remover"><i class="icon-remove small" style="color:red"></i></a> ' +
                             '<a onclick="editorFunction(' + index + ')" class="remover" ><i class="icon-edit small" style="color:blue"></i></a></td></tr>');
                         itemOrder.push(
                             {
                                 rowId: index,
-                                itemCategoryId: jq("#itemCategory").children(":selected").attr("id"),
-                                itemCategoryName: jq("#itemCategory").children(":selected").val(),
+                                itemCategoryId: jq("#itemSubCategory").children(":selected").attr("id"),
+                                itemCategoryName: jq("#itemSubCategory").children(":selected").val(),
                                 itemId: 0,
                                 itemName: jq("#itemName").val(),
                                 itemSpecificationId: jq("#itemSpecification").children(":selected").attr("id"),
@@ -95,7 +96,6 @@
                                 unitPrice: unitPrice,
                                 institutionalCost: institutionalCost,
                                 costToThePatient: jq("#costToThePatient").val(),
-                                batchNo: jq("#batchNo").val(),
                                 dateOfManufacture: jq("#dateOfManufacture-field").val(),
                                 receiptDate: jq("#receiptDate-field").val(),
                                 receiptFrom: receiptFrom
@@ -149,11 +149,11 @@
             function page_verified() {
                 var error = 0;
 
-                if (jq("#itemCategory").children(":selected").attr("id") === 0) {
-                    jq("#itemCategory").addClass('red');
+                if (jq("#itemSubCategory").children(":selected").attr("id") === 0) {
+                    jq("#itemSubCategory").addClass('red');
                     error++;
                 } else {
-                    jq("#itemCategory").removeClass('red');
+                    jq("#itemSubCategory").removeClass('red');
                 }
 
                 if (jq("#itemName").children(":selected").attr("id") === 0) {
@@ -184,12 +184,6 @@
                     jq("#costToThePatient").removeClass('red');
                 }
 
-                if (jq("#batchNo").val() === "") {
-                    jq("#batchNo").addClass('red');
-                    error++;
-                } else {
-                    jq("#batchNo").removeClass('red');
-                }
 
                 if (jq("#companyName").val().trim() === '') {
                     jq("#companyName").addClass('red');
@@ -210,6 +204,7 @@
                     jq("#receiptDate-display").removeClass('red');
                 }
 
+
                 if (error === 0) {
                     return true;
                 } else {
@@ -219,7 +214,7 @@
 
             function resets() {
                 jq('form')[0].reset();
-                jq('#itemCategory').change();
+                jq('#itemSubCategory').change();
             }
 
 
@@ -228,7 +223,7 @@
                 addItemDialog.show();
             });
 
-            jq("#itemCategory").on("change", function (e) {
+            jq("#itemSubCategory").on("change", function (e) {
                 var categoryId = jq(this).children(":selected").attr("id");
                 var itemNameData = "<option id='0' name='0'>Select item</option>";
                 var itemSpecificationData = "<option id='0'>Select Specification</option>";
@@ -236,8 +231,7 @@
                 jq('#itemName').empty();
                 jq('#itemSpecification').empty();
 
-                jq.getJSON('${ ui.actionLink("ehrinventoryapp", "AddItemReceiptsToStore", ""+
-                "") }', {
+                jq.getJSON('${ ui.actionLink("ehrinventoryapp", "AddItemReceiptsToStore", "fetchItemNames") }', {
                     categoryId: categoryId
                 }).success(function (data) {
                     for (var key in data) {
@@ -289,8 +283,8 @@
                     change: function (event, ui) {
                         event.preventDefault();
                         jq(this).val(ui.item.label);
-                        var categoryId = ui.item.value.category.id;
-                        jq("#itemCategory option[id=" + categoryId + "]").attr('selected', 'selected');
+                        var categoryId = ui.item.value.subCategory.id;
+                        jq("#itemSubCategory option[id=" + categoryId + "]").attr('selected', 'selected');
                         jq.getJSON('${ ui.actionLink("ehrinventoryapp", "AddItemReceiptsToStore", "getSpecificationByItemName") }',
                             {
                                 "itemName": ui.item.label
@@ -334,13 +328,8 @@
                     }
                 }
             });
-           /* jq("#dateOfManufacture-display").on("change", function (e) {
-                        jq('#dateOfManufacture-display').focus();
-                        jq("#dateOfManufacture-display").val("");
-                        jq("#dateOfManufacture-field").val();
 
-            });
-*/
+
         });
 
         function removerFunction(rowId) {
@@ -358,10 +347,10 @@
                 jq.each(itemOrder, function (rowId, item) {
 
                     console.log(item);
-                        tbody.append('<tr id="' + (rowId + 1) + '"><td>' + (rowId + 1) + '</td><td>' + item.itemCategoryName + '</td><td>' + item.itemName +
+                        tbody.append('<tr id="' + (rowId + 1) + '"><td>' + (rowId + 1) + '</td><td>' + item.itemCategory + '</td><td>' + item.itemName +
                         '</td><td>' + item.itemSpecificationName + '</td><td>' + item.quantity +
                         '</td><td>' + item.unitPrice + '</td><td>' + item.institutionalCost +
-                        '</td><td>' + item.costToThePatient + '</td><td>' + item.batchNo + '</td><td>' + item.receiptDate + '</td><td>' + item.receiptFrom +
+                        '</td><td>' + item.costToThePatient + '</td><td>' + item.receiptDate + '</td><td>' + item.receiptFrom +
                         '</td><td><a onclick="removerFunction(' + rowId + ')" class="remover"><i class="icon-remove small" style="color:red"></i></a> ' +
                         '<a class="remover" ><i class="icon-edit small" style="color:blue"></i></a></td></tr>');
                 });
@@ -374,7 +363,7 @@
         function printSlip() {
             var printDiv = jq("#addItemsTablePrintable").html();
             var printWindow = window.open('', '', 'height=400,width=800');
-            printWindow.document.write('<html><head><title>Patient Information</title>');
+            printWindow.document.write('<html><head><title>RECEIPT INFORMATION</title>');
             printWindow.document.write(printDiv);
             printWindow.document.write('</body></html>');
             printWindow.document.close();
@@ -789,14 +778,13 @@
                 <thead>
                 <tr role="row">
                     <th title="Record ID">#</th>
-                    <th title="item Category">CATEGORY</th>
-                    <th title="item Name">NAME</th>
+                    <th title="Item Category">SUB-CATEGORY</th>
+                    <th title="Item Name">NAME</th>
                     <th title="Specification">SPECIFICATION</th>
                     <th title="Quantity">QNTY</th>
                     <th title="Unit Price">PRICE</th>
                     <th title="Institutional Cost(%)">I.COST</th>
                     <th title="Cost To The Patient">COST</th>
-                    <th title="Batch Number">BATCH#</th>
                     <th title="Receipt Date">R.D</th>
                     <th title="Receipt From">FROM</th>
                     <th title="Task Actions">&nbsp;</th>
@@ -841,8 +829,8 @@
     <form class="dialog-content">
         <ul>
             <li>
-                <label for="listItemSubCategory">item Category<span>*</span></label>
-                <select name="itemCategory" id="listItemSubCategory">
+                <label for="itemSubCategory">item Category<span>*</span></label>
+                <select name="itemSubCategory" id="itemSubCategory">
                     <option id="0">Select Category</option>
                     <% if (listItemSubCategory != null || listItemSubCategory != "") { %>
                     <% listItemSubCategory.each { itemCategory -> %>
@@ -852,7 +840,7 @@
                 </select>
             </li>
             <li>
-                <label for="itemName">item Name<span>*</span></label>
+                <label for="itemName">Item Name<span>*</span></label>
                 <input type="text" name="itemName" id="itemName">
             </li>
 
@@ -881,11 +869,6 @@
             <li>
                 <label for="costToThePatient">Cost To The Patient<span>*</span></label>
                 <input name="costToThePatient" id="costToThePatient" type="text">
-            </li>
-
-            <li>
-                <label for="batchNo">Batch No.<span>*</span></label>
-                <input name="batchNo" id="batchNo" type="text">
             </li>
 
             <li>
