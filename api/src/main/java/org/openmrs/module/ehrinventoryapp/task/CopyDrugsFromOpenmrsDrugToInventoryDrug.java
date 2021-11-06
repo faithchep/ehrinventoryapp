@@ -104,8 +104,8 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
             headLine = br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] records = line.split(cvsSplitBy);
-                name = records[0];
-                dosage = records[1];
+                dosage = records[0];
+                name = records[1];
                 if (StringUtils.isNotEmpty(name) && StringUtils.isNotEmpty(dosage)) {
                     if(inventoryService.getDrugFormulation(name, dosage) == null ) {
                         InventoryDrugFormulation inventoryDrugFormulation = new InventoryDrugFormulation();
@@ -115,7 +115,6 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
                         inventoryDrugFormulation.setCreatedBy(Context.getAuthenticatedUser().getGivenName());
 
                         inventoryService.saveDrugFormulation(inventoryDrugFormulation);
-                        //System.out.println("The formulation is >>"+name +" and "+dosage);
                     }
                 }
             }
@@ -163,7 +162,7 @@ public class CopyDrugsFromOpenmrsDrugToInventoryDrug extends AbstractTask {
                     InventoryDrug inventoryDrug = inventoryCommonService.getDrugByName(name);
                     InventoryDrugUnit inventoryDrugUnit = inventoryService.getDrugUnitById(1);
                     InventoryDrugCategory inventoryDrugCategory = inventoryService.getDrugCategoryByName(category);
-                    InventoryDrugFormulation inventoryDrugFormulation = inventoryService.getDrugFormulation(strength, dosage);
+                    InventoryDrugFormulation inventoryDrugFormulation = inventoryService.getDrugFormulation(dosage, strength);
 
                     if(openMrsDrug != null && inventoryDrugUnit != null && inventoryDrugCategory != null) {
                         if(inventoryDrug == null && inventoryDrugFormulation != null) {
